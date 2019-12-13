@@ -1,0 +1,17 @@
+body {
+    background: antiquewhite;
+}
+
+h1 {
+    display: inline-block;
+}
+
+img#logo_img {
+    height: 64px;
+}
+
+#user_message {
+    size: 128px;
+    background-color: chocolate;
+    color: whitesmoke;
+}

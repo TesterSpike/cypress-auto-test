@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="style/stylingFlex.css">
+    <link rel="stylesheet" type="text/css" href="style/styling.css">
+    <script src="scripts/Login.js"></script>
+    <meta charset="UTF-8">
+    <title>Layout</title>
+</head>
+<body onload="PageLoad();">
+<div id="wrapperFlex">
+    <div id="headerWrapperFlex">
+        <div id="headerLeftFlex"><img id="logo_img" alt="Logo" src="assets/logo.png"/></div>
+        <div id="headerRightFlex">
+            123 Address Street<br/>
+            Address City<br/>
+            Address Country<br/>
+            Address PostCode<br/>
+            <a id="ContactUs" href="" target="_blank">Contact Us</a>
+        </div>
+    </div>
+    <div id="contentWrapperFlex">
+        <div id="sideBarLeftFlex"></div>
+        <div id="contentInnerFlex">
+            <div id="messageContainer">
+                <p id="user_message"></p>
+            </div>
+            <form id="loginForm" method="post" action="Welcome.html">
+                <div class="FormContainer">
+                    <p><label for="username"><b>Username</b>
+                        <input type="text" placeholder="Enter Username" name="username" id="username" required
+                               autocomplete="username">
+                    </label></p>
+
+                    <p><label for="password"><b>Password</b>
+                        <input type="password" placeholder="Enter Password" id="password" name="password" required
+                               autocomplete="current-password">
+                    </label></p>
+
+                    <p>
+                        <input id="submitBtn" type="button" cy-data="login_button" disabled="disabled" value="Login"
+                               onclick="VerifyLogin(this.form)"/>
+                        <label for="rememberMe">
+                            <input id="rememberMe" type="checkbox" name="remember"> Remember me
+                        </label>
+                    </p>
+                </div>
+                    <span>Forgot <a href="#">password?</a></span>
+            </form>
+        </div>
+        <div id="sideBarRightFlex"></div>
+    </div>
+    <div id="footerWrapperFlex">&copy; IKA Test Consulting Ltd</div>
+</div>
+</body>
+</html>

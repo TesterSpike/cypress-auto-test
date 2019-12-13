@@ -1,0 +1,15 @@
+{
+  "name": "cypress-auto-test",
+  "version": "1.0.0",
+  "description": "Frontend component testing using Cypress",
+  "author" : "IKA Test Consulting Ltd",
+  "license": "ISC",
+  "scripts": {
+    "test": "cypress run --browser chrome"
+  },
+  "dependencies": {
+    "cypress": "^3.8.0"
+  },
+  "repository": ""
+}
+

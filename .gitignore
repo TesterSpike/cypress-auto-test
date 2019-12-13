@@ -1,0 +1,11 @@
+# Log files
+.logs
+*.log
+
+# Dependency directories
+/node_modules/
+/cypress/screenshots/
+/cypress/videos/
+
+# Jetbrains
+/.idea/
