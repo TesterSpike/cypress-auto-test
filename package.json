@@ -4,12 +4,12 @@
   "description": "Frontend component testing using Cypress",
   "author" : "IKA Test Consulting Ltd",
   "license": "ISC",
+  "repository": "https://github.com/IKA-test-consulting/cypress-auto-test",
   "scripts": {
     "test": "cypress run --browser chrome"
   },
   "dependencies": {
     "cypress": "^3.8.0"
-  },
-  "repository": ""
+  }
 }
 

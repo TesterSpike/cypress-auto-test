@@ -5,10 +5,10 @@ function VerifyLogin(loginForm) {
     const userName = userNameElement.value;
     const password = passwordElement.value;
     if (userName.toLowerCase() === "fake" || password.toLowerCase() === "fake") {
-        document.getElementById("user_message").innerText = "Please supply a valid user name and password";
+        setMessage("Please supply a valid user name and password");
     } else {
-        document.cookie = "userName=" + userName;
-        document.cookie = "isLoggedIn=true;";
+        document.cookie = "userName=" + userName + "; Domain=localhost; Path=/cypress-auto-test/site";
+        document.cookie = "isLoggedIn=true; Domain=localhost; Path=/cypress-auto-test/site";
         loginForm.submit();
     }
 
@@ -26,12 +26,18 @@ function PageLoad() {
     }
 
     userNameElement.addEventListener("input", () => {
+        setMessage("");
         isUserNameEntered = userNameElement.value !== "";
         enableLogin();
     });
 
     passwordElement.addEventListener("input", () => {
+        setMessage("");
         isPasswordEntered = passwordElement.value !== "";
         enableLogin();
     });
+}
+
+function setMessage(message) {
+    document.getElementById("user_message").innerText = message;
 }
