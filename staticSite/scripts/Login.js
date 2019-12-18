@@ -1,20 +1,30 @@
+import {setUserNameCookie, setLoggedInCookie} from "../scripts/CookieHandler.js"
+
 let userNameElement;
 let passwordElement;
 
-function VerifyLogin(loginForm) {
+/** Import used so this is now a module and the functions have to be exposed to the html page**/
+window.OnLoad = OnLoad;
+window.VerifyLogin = VerifyLogin;
+
+function setMessage(message) {
+    document.getElementById("user_message").innerText = message;
+}
+
+export function VerifyLogin(loginForm) {
     const userName = userNameElement.value;
     const password = passwordElement.value;
     if (userName.toLowerCase() === "fake" || password.toLowerCase() === "fake") {
         setMessage("Please supply a valid user name and password");
     } else {
-        document.cookie = "userName=" + userName + "; Domain=localhost; Path=/cypress-auto-test/site";
-        document.cookie = "isLoggedIn=true; Domain=localhost; Path=/cypress-auto-test/site";
+        setUserNameCookie(userName);
+        setLoggedInCookie(true);
         loginForm.submit();
     }
 
 }
 
-function PageLoad() {
+export function OnLoad() {
     userNameElement = document.getElementById("username");
     passwordElement = document.getElementById("password");
 
@@ -36,8 +46,4 @@ function PageLoad() {
         isPasswordEntered = passwordElement.value !== "";
         enableLogin();
     });
-}
-
-function setMessage(message) {
-    document.getElementById("user_message").innerText = message;
 }

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="style/stylingFlex.css">
+    <link rel="stylesheet" type="text/css" href="style/styling.css">
+    <link rel="modulepreload" href="./scripts/Welcome.js">
+    <script type="module" src="./scripts/Welcome.js"></script>
+    <meta charset="UTF-8">
+    <title>Generic Company Site</title>
+</head>
+<body onload="OnLoad()">
+<div id="wrapperFlex">
+    <div id="headerWrapperFlex">
+        <div id="headerLeftFlex"><img id="logo_img" alt="Logo" src="assets/logo.png"/></div>
+        <div id="headerRightFlex">
+            123 Address Street<br/>
+            Address City<br/>
+            Address Country<br/>
+            Address PostCode<br/>
+            <a id="ContactUs" href="" target="_blank">Contact Us</a>
+        </div>
+    </div>
+    <div id="contentWrapperFlex">
+        <div id="sideBarLeftFlex"></div>
+        <div id="contentInnerFlex">
+            <div id="messageContainer">
+                <p id="user_message"></p>
+            </div>
+            <h1 id="welcome_message"></h1>
+        </div>
+        <div id="sideBarRightFlex"></div>
+    </div>
+    <div id="footerWrapperFlex"></div>
+</div>
+</body>
+</html>

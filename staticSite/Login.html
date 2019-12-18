@@ -3,11 +3,12 @@
 <head>
     <link rel="stylesheet" type="text/css" href="style/stylingFlex.css">
     <link rel="stylesheet" type="text/css" href="style/styling.css">
-    <script src="scripts/Login.js"></script>
+    <link rel="modulepreload" href="./scripts/Login.js">
+    <script type="module" src="./scripts/Login.js"></script>
     <meta charset="UTF-8">
-    <title>Layout</title>
+    <title>Generic Company Site</title>
 </head>
-<body onload="PageLoad();">
+<body onload="OnLoad()">
 <div id="wrapperFlex">
     <div id="headerWrapperFlex">
         <div id="headerLeftFlex"><img id="logo_img" alt="Logo" src="assets/logo.png"/></div>
@@ -45,7 +46,7 @@
                         </label>
                     </p>
                 </div>
-                    <span>Forgot <a href="#">password?</a></span>
+                <span>Forgot <a href="#">password?</a></span>
             </form>
         </div>
         <div id="sideBarRightFlex"></div>

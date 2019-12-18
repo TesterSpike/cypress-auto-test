@@ -1,10 +1,10 @@
-import {loginLocator} from "../utilities/Locators";
+import {loginLocator, welcomeLocator} from "../../utilities/Locators";
 
 const userName = "bob";
 const password = "password";
 
 beforeEach(() => {
-    cy.visit('/site/Login.html');
+    cy.visit('./staticSite/Login.html');
 });
 
 describe("Error scenarios", () => {
@@ -45,9 +45,11 @@ describe("User can login successfully", () => {
         cy.get(loginLocator.username).type(userName);
         cy.get(loginLocator.password).type(password);
         cy.get(loginLocator.loginButton).click();
+        cy.getCookie("userName").should('have', 'value', userName).and('have', 'path', "/staticSite");
+        cy.getCookie("isLoggedIn").should("have", "value", true).and('have', 'path', "/staticSite");
         cy.url().should("include", "Welcome.html");
-        cy.getCookie("userName").should('have', 'value', userName).and('have', 'path', "/cypress-auto-test/site");
-        //cy.get('welcome message locator').should have user name
+        //This test is better placed in the welcome component tests as the result has nothing to do with the form logic
+        //cy.get(welcomeLocator.welcomeMessage).should("contain", userName);
     });
 });
 

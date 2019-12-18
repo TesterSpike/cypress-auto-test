@@ -2,14 +2,20 @@
   "name": "cypress-auto-test",
   "version": "1.0.0",
   "description": "Frontend component testing using Cypress",
-  "author" : "IKA Test Consulting Ltd",
+  "author": "IKA Test Consulting Ltd",
   "license": "ISC",
-  "repository": "https://github.com/IKA-test-consulting/cypress-auto-test",
+  "repository": "github:IKA-test-consulting/cypress-auto-test",
+  "engines": {
+    "node": ">=12.0.0",
+    "npm": ">=6.0.0"
+  },
   "scripts": {
+    "startSite": "ws --directory staticSite/",
     "test": "cypress run --browser chrome"
   },
   "dependencies": {
-    "cypress": "^3.8.0"
+    "cypress": "3.8.0",
+    "local-web-server": "^3.0.7"
   }
 }
 
