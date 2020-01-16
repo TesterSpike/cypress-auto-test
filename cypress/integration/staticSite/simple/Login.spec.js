@@ -1,13 +1,13 @@
-import {loginLocator, welcomeLocator} from "../../utilities/Locators";
+import {loginLocator, welcomeLocator} from "../../../utilities/Locators";
 
 const userName = "bob";
 const password = "password";
 
-beforeEach(() => {
-    cy.visit('./staticSite/Login.html');
-});
-
 describe("Error scenarios", () => {
+    beforeEach(() => {
+        cy.visit('./staticSite/Login.html');
+    });
+
     it("Invalid credentials", () => {
         cy.get(loginLocator.username).type("fake");
         cy.get(loginLocator.password).type(password);
@@ -40,6 +40,9 @@ describe("Forgotten password", () => {
 });
 
 describe("User can login successfully", () => {
+    beforeEach(() => {
+        cy.visit('./staticSite/Login.html');
+    });
 
     it("User with valid credentials will be welcomed", () => {
         cy.get(loginLocator.username).type(userName);

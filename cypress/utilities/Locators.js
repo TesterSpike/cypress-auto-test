@@ -6,5 +6,6 @@ export const loginLocator = {
 };
 
 export const welcomeLocator = {
-    "welcomeMessage": "#welcome_message"
+    "welcomeMessage": "#welcome_message",
+    "errorMessage" : "#user_message"
 };

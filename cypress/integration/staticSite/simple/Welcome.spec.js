@@ -1,4 +1,4 @@
-import {welcomeLocator} from "../../utilities/Locators";
+import {welcomeLocator} from "../../../utilities/Locators";
 
 describe("Welcome Page success", () => {
     const userName = "Bob";
