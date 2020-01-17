@@ -21,7 +21,6 @@ export function getCookie(cname) {
 
 export function setUserNameCookie(userName) {
     document.cookie = userNameCookieId + "=" + userName + ";" + domain + ";" + path;
-    console.log("User cookie: " + userNameCookieId + "=" + userName + ";" + domain + ";" + path);
 }
 
 export function getUserCookie() {

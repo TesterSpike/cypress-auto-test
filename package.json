@@ -11,7 +11,8 @@
   },
   "scripts": {
     "startSite": "ws --directory staticSite/",
-    "test": "cypress run --browser chrome"
+    "test": "cypress run --browser chrome",
+    "open" : "cypress open"
   },
   "dependencies": {
     "cypress": "3.8.2",

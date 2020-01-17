@@ -38,10 +38,8 @@ export class LoginPage {
         cy.get(loginLocator.password).should("be.visible");
         cy.get(loginLocator.loginButton).should("be.visible");
         if (isLoginDetailsEntered) {
-            console.log("login button should not be disabled");
             cy.get(loginLocator.loginButton).should("not.be.disabled");
         } else {
-            console.log("login button should be disabled");
             cy.get(loginLocator.loginButton).should("to.be.disabled");
         }
     }

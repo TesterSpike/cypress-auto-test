@@ -1,0 +1,10 @@
+{
+  "test" : {
+    "username": "Jack",
+    "password": "Black"
+  },
+  "fake": {
+    "username": "Fake",
+    "password": "fake"
+  }
+}
